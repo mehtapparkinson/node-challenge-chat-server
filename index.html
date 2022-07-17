@@ -3,17 +3,52 @@
   <head>
     <title>Welcome to CYF Chat</title>
   </head>
+  <style>
+    body {
+      background-color: antiquewhite;
+      text-align: center;
+      
+
+    }
+    h1, h2{
+      color:rgb(233, 98, 25);
+      padding: 20px;
+    }
+    p {color:rgb(0, 16, 107);}
+    button {
+      background-color: rgb(254, 89, 0) ;
+      border-radius: 30px;
+      color: white;
+      font-size: 20px;
+      margin: 30px;
+      width: 100px;
+    }
+    input {
+      margin: 10px;
+      width: 200px;
+    }
+
+    a {
+      color: brown;
+      text-decoration: none;
+
+    }
+
+    a:hover {
+      color: rgb(229, 99, 0);
+    }
+  </style>
   <body>
     <h1>
       CYF Chat
     </h1>
     <h2>
-      Send a message
+      Send a message below 👇🏼 
     </h2>
     <form action="/messages" method="post">
       <p>
-        Name: <input type="text" name="from" placeholder="Your Name" /> <br />
-        Message: <input type="text" name="text" placeholder="The message..." />
+        <input type="text" name="from" placeholder="Your Name" /> <br />
+        <input type="text" name="text" placeholder="The message..." />
         <br />
       </p>
       <button type="submit">
@@ -21,6 +56,10 @@
       </button>
     </form>
 
+
     <a href="/messages">See all messages</a>
+    <div id="messages-section"> </div>
+   
+    <script src="./index.js" ></script>
   </body>
 </html>
